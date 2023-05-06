@@ -20,33 +20,33 @@ function App() {
       </div>
 
       <Router>
+        <div className='all-routes'>
+          <Route exact path="/">
+            <Feeling />
+          </Route>
 
-      <Route exact path="/">
-        <Feeling />
-      </Route>
+          <Route exact path="/understanding">
+            <Understanding />
+          </Route>
 
-      <Route exact path="/understanding">
-        <Understanding />
-      </Route>
-      
-      <Route exact path="/supported">
-        <Supported />
-      </Route>
-      
-      <Route exact path="/comments">
-        <Comments />
-      </Route>
-      
-      <Route exact path="/review">
-        <Review />
-      </Route>
+          <Route exact path="/supported">
+            <Supported />
+          </Route>
 
-      <Route exact path="/success">
-        <Success />
-      </Route>
-      
+          <Route exact path="/comments">
+            <Comments />
+          </Route>
+
+          <Route exact path="/review">
+            <Review />
+          </Route>
+
+          <Route exact path="/success">
+            <Success />
+          </Route>
+        </div>
       </Router>
-      
+
     </div>
   );
 }
