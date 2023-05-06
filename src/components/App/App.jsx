@@ -19,7 +19,7 @@ function App() {
       <Understanding />
       <Supported />
       <Comments />
-      {/* <Review /> */}
+      <Review />
     </div>
   );
 }
