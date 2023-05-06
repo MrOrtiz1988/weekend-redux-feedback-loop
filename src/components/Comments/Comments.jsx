@@ -30,7 +30,7 @@ function Comments () {
                 value={commentInput}
                 onChange={ event => setCommentInput(event.target.value) }
             />
-            <button>NEXT</button>
+            <button className='next'>NEXT</button>
         </form>
     )
 }

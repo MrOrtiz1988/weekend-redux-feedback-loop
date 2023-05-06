@@ -26,12 +26,12 @@ function Feeling () {
             <h1>How are you feeling today?</h1>
             <input 
                 required
-                type="text"
+                type="number" min="1" max="5"
                 placeholder="feeling?"
                 value={feelingInput}
                 onChange={ event => setFeelingInput(event.target.value) }
             />
-            <button>NEXT</button>
+            <button className='next'>NEXT</button>
         </form>
     )
 }
