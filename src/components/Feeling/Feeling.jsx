@@ -19,7 +19,7 @@ function Feeling () {
 
     return (
         <form onSubmit={sendFeeling}>
-            <h1>How well are you understanding the content?</h1>
+            <h1>How are you feeling today?</h1>
             <input 
                 type="text"
                 placeholder="Understanding?"
