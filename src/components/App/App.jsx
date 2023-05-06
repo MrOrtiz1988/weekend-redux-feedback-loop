@@ -4,6 +4,7 @@ import './App.css';
 import Header from '../Header/Header';
 import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
+import Supported from '../Supported/Supported';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       </div>
       <Feeling />
       <Understanding />
+      <Supported />
     </div>
   );
 }
