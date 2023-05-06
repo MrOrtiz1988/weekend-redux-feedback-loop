@@ -25,6 +25,7 @@ function Supported () {
         <form onSubmit={sendSupported}>
             <h1>How well are you being supported?</h1>
             <input 
+                required
                 type="text"
                 placeholder="Supported?"
                 value={supportedInput}

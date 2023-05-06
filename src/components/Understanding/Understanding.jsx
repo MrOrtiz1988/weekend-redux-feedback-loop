@@ -25,6 +25,7 @@ function Understanding () {
         <form onSubmit={sendUnderstanding}>
             <h1>How well are you understanding the content?</h1>
             <input 
+                required
                 type="text"
                 placeholder="Understanding?"
                 value={understandingInput}
