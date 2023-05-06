@@ -25,6 +25,7 @@ function Feeling () {
         <form onSubmit={sendFeeling}>
             <h1>How are you feeling today?</h1>
             <input 
+                required
                 type="text"
                 placeholder="feeling?"
                 value={feelingInput}

@@ -1,9 +1,12 @@
 import { useSelector } from 'react-redux';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 function Review () {
 
     const feedback = useSelector((store) => store.feedback);
+
+    const history = useHistory();
 
     const sendFeedback = () => {
         axios({
@@ -12,6 +15,9 @@ function Review () {
             data: feedback
         }).then( response => {
             console.log(response);
+            if (response.status === 201) {
+                history.push('/success')
+            }
         }).catch(error => {
             console.log('Problem with sendFeedback', error);
         })
