@@ -20,7 +20,7 @@ function Comments () {
     return (
         <form onSubmit={sendComment}>
             <h1>Any Comments you want to leave?</h1>
-            <input 
+            <textarea 
                 type="text"
                 placeholder="Comments?"
                 value={commentInput}
