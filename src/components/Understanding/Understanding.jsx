@@ -26,12 +26,12 @@ function Understanding () {
             <h1>How well are you understanding the content?</h1>
             <input 
                 required
-                type="text"
+                type="number" min="1" max="5"
                 placeholder="Understanding?"
                 value={understandingInput}
                 onChange={ event => setUnderstandingInput(event.target.value) }
             />
-            <button>NEXT</button>
+            <button className='next'>NEXT</button>
         </form>
     )
 }

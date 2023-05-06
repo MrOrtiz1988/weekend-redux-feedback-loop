@@ -26,12 +26,12 @@ function Supported () {
             <h1>How well are you being supported?</h1>
             <input 
                 required
-                type="text"
-                placeholder="Supported?"
+                type="number" min="1" max="5"
+                placeholder="Support?"
                 value={supportedInput}
                 onChange={ event => setSupportedInput(event.target.value) }
             />
-            <button>NEXT</button>
+            <button className='next'>NEXT</button>
         </form>
     )
 }

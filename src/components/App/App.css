@@ -29,3 +29,11 @@ h4 {
   text-align: center;
 }
 
+input {
+  width: 40%;
+}
+
+.next {
+  margin-left: 5px;
+}
+
