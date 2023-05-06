@@ -8,12 +8,17 @@ function Feeling () {
 
     const dispatch = useDispatch();
     
-    const sendFeeling = () => {
+    const sendFeeling = (event) => {
+        event.preventDefault();
 
+        dispatch({
+            type: 'SET_FEELING',
+            payload: feelingInput
+        })
     }
 
     return (
-        <form>
+        <form onSubmit={sendFeeling}>
             <h1>How well are you understanding the content?</h1>
             <input 
                 type="text"
