@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-
+import { useHistory } from 'react-router-dom';
 
 function Comments () {
 
     const [commentInput, setCommentInput] = useState('');
 
     const dispatch = useDispatch();
+
+    const history = useHistory();
     
     const sendComment = (event) => {
         event.preventDefault();
@@ -14,7 +16,9 @@ function Comments () {
         dispatch({
             type: 'SET_COMMENT',
             payload: commentInput
-        })
+        });
+
+        history.push('/review');
     }
 
     return (
