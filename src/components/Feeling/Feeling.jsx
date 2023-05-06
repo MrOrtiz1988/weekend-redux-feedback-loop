@@ -22,7 +22,7 @@ function Feeling () {
             <h1>How are you feeling today?</h1>
             <input 
                 type="text"
-                placeholder="Understanding?"
+                placeholder="feeling?"
                 value={feelingInput}
                 onChange={ event => setFeelingInput(event.target.value) }
             />
