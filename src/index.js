@@ -11,22 +11,28 @@ import logger from 'redux-logger';
 //i managed to only need one reducer for each view
 const feedback = (state = {}, action) => {
     if (action.type === 'SET_FEELING') {
-        return {...state, feeling: action.payload}
+        return {...state, feeling: action.payload};
     }else if (action.type === 'SET_UNDERSTANDING') {
-        return {...state, understanding: action.payload}
+        return {...state, understanding: action.payload};
     }else if (action.type === 'SET_SUPPORTED') {
-        return {...state, supported: action.payload}
+        return {...state, supported: action.payload};
     }else if (action.type === 'SET_COMMENT') {
-        return {...state, comments: action.payload}
+        return {...state, comments: action.payload};
     }
     return state;
 }
 
-
+const feedbackHistory = (state = [], action) => {
+    if (action.type === 'ALL_FEEDBACK_HISTORY') {
+        return action.payload;
+    }
+    return state;
+}
 
 const myStore = createStore(
     combineReducers({
-        feedback
+        feedback,
+        feedbackHistory
     }),
     applyMiddleware(
         logger
