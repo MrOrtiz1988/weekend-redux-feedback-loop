@@ -25,6 +25,11 @@ function Supported() {
         history.push('/comments');
     }
 
+    const backButton = () => {
+        
+        history.push('/understanding');
+    }
+
     return (
 
         <Box
@@ -46,6 +51,7 @@ function Supported() {
                 value={supportedInput}
                 onChange={event => setSupportedInput(event.target.value)}
             />
+            <Button onClick={backButton} type="button" sx={{ mt: 2, ml: 4 }} variant="contained">BACK</Button>
             <Button type="submit" sx={{ mt: 2, ml: 4 }} variant="contained">NEXT</Button>
 
         </Box>
