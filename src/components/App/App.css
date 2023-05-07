@@ -25,15 +25,12 @@ h4 {
 .all-routes {
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 90%;
+  height: 260px;
   text-align: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-input {
-  width: 40%;
-}
 
-.next {
-  margin-left: 5px;
-}
+
 

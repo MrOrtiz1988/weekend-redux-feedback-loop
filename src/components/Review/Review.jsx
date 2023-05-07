@@ -1,8 +1,12 @@
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
+//Material ui
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
+import SendIcon from '@mui/icons-material/Send';
 
-function Review () {
+function Review() {
 
     const feedback = useSelector((store) => store.feedback);
 
@@ -13,7 +17,7 @@ function Review () {
             method: 'POST',
             url: '/feedback',
             data: feedback
-        }).then( response => {
+        }).then(response => {
             console.log(response);
             if (response.status === 201) {
                 history.push('/success')
@@ -30,7 +34,9 @@ function Review () {
             <h3>Understanding: {feedback.understanding}</h3>
             <h3>Support: {feedback.supported}</h3>
             <h3>Comments: {feedback.comments}</h3>
-            <button onClick={sendFeedback}>SUBMIT</button>
+            <Button onClick={sendFeedback} sx={{ mb: 5 }} variant="contained" endIcon={<SendIcon />}>
+                SUBMIT
+            </Button>
         </div>
     )
 }
