@@ -14,7 +14,8 @@ function Feeling() {
 
     const history = useHistory();
 
-    const sendFeeling = () => {
+    const sendFeeling = (event) => {
+        event.preventDefault()
 
         dispatch({
             type: 'SET_FEELING',
@@ -27,11 +28,11 @@ function Feeling() {
     return (
 
         <Box
+            onSubmit={sendFeeling}
             component="form"
             sx={{
                 '& .MuiTextField-root': { m: 1, width: '25ch' },
             }}
-            noValidate
             autoComplete="off"
         >
             <h1>How are you feeling today?</h1>
@@ -46,10 +47,10 @@ function Feeling() {
                 onChange={event => setFeelingInput(event.target.value)}
             />
 
-            <Button onClick={sendFeeling} sx={{ mt: 2, ml: 4 }} variant="contained">NEXT</Button>
+            <Button type="submit" sx={{ mt: 2, ml: 4 }} variant="contained">NEXT</Button>
         </Box>
 
-        // </form>
+      
     )
 }
 

@@ -15,8 +15,7 @@ function Comments() {
 
     const history = useHistory();
 
-    const sendComment = (event) => {
-        event.preventDefault();
+    const sendComment = () => {
 
         dispatch({
             type: 'SET_COMMENT',

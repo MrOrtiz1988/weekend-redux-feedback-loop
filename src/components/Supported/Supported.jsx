@@ -14,7 +14,8 @@ function Supported() {
 
     const history = useHistory();
 
-    const sendSupported = () => {
+    const sendSupported = (event) => {
+        event.preventDefault()
 
         dispatch({
             type: 'SET_SUPPORTED',
@@ -27,11 +28,11 @@ function Supported() {
     return (
 
         <Box
+            onSubmit={sendSupported}
             component="form"
             sx={{
                 '& .MuiTextField-root': { m: 1, width: '25ch' },
             }}
-            noValidate
             autoComplete="off"
         >
             <h1>How well are you being supported?</h1>
@@ -45,7 +46,7 @@ function Supported() {
                 value={supportedInput}
                 onChange={event => setSupportedInput(event.target.value)}
             />
-            <Button onClick={sendSupported} sx={{ mt: 2, ml: 4 }} variant="contained">NEXT</Button>
+            <Button type="submit" sx={{ mt: 2, ml: 4 }} variant="contained">NEXT</Button>
 
         </Box>
 

@@ -14,7 +14,8 @@ function Understanding() {
 
     const history = useHistory();
 
-    const sendUnderstanding = () => {
+    const sendUnderstanding = (event) => {
+        event.preventDefault()
 
         dispatch({
             type: 'SET_UNDERSTANDING',
@@ -27,11 +28,11 @@ function Understanding() {
     return (
 
         <Box
+            onSubmit={sendUnderstanding}
             component="form"
             sx={{
                 '& .MuiTextField-root': { m: 1, width: '25ch' },
             }}
-            noValidate
             autoComplete="off"
         >
             <h1>How well are you understanding the content?</h1>
@@ -45,7 +46,7 @@ function Understanding() {
                 value={understandingInput}
                 onChange={event => setUnderstandingInput(event.target.value)}
             />
-            <Button onClick={sendUnderstanding} sx={{ mt: 2, ml: 4 }} variant="contained">NEXT</Button>
+            <Button type="submit" sx={{ mt: 2, ml: 4 }} variant="contained">NEXT</Button>
 
         </Box>
     )
