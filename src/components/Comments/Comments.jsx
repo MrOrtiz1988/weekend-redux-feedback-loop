@@ -25,6 +25,11 @@ function Comments() {
         history.push('/review');
     }
 
+    const backButton = () => {
+
+        history.push('/supported');
+    }
+
     return (
 
         <Box
@@ -45,6 +50,7 @@ function Comments() {
                 value={commentInput}
                 onChange={event => setCommentInput(event.target.value)}
             />
+            <Button onClick={backButton} type="button" sx={{ mt: 2, ml: 4 }} variant="contained">BACK</Button>
             <Button onClick={sendComment} sx={{ mt: 2, ml: 4 }} variant="contained">NEXT</Button>
 
         </Box>
