@@ -20,6 +20,8 @@ function App() {
       </div>
 
       <Router>
+      {/* i wrapped all of it in a div to apply css rules to each vew page 
+      so i wouldnt write it multiple times */}
         <div className='all-routes'>
           <Route exact path="/">
             <Feeling />
